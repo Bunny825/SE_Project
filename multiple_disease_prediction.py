@@ -3,7 +3,7 @@ import streamlit as st
 import numpy as np
 from streamlit_option_menu import option_menu
 import tensorflow as tf
-from tf import keras
+from tensorflow import keras
 
 heart_model=pickle.load(open("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/heart.sav","rb"))
 diabetes_model=pickle.load(open("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/diabetes_model.sav","rb"))
