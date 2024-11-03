@@ -5,15 +5,15 @@ from streamlit_option_menu import option_menu
 import tensorflow as tf
 from tensorflow import keras
 
-heart_model=pickle.load(open("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/heart.sav","rb"))
-diabetes_model=pickle.load(open("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/diabetes_model.sav","rb"))
-parkinson_model=pickle.load(open("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/parkinson_model.sav","rb"))
+heart_model=pickle.load(open("heart.sav","rb"))
+diabetes_model=pickle.load(open("diabetes_model.sav","rb"))
+parkinson_model=pickle.load(open("parkinson_model.sav","rb"))
 
-cardio_model=tf.keras.models.load_model("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/cardio_model.h5")
+cardio_model=tf.keras.models.load_model("cardio_model.h5")
 
-parkinson_scaler=pickle.load(open("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/parkinson_scaler.sav","rb"))
-diabetes_scaler=pickle.load(open("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/diabetes_scaler.sav","rb"))
-cardio_scaler=pickle.load(open("/home/bunnys-weapon/ML web apps/multiple disease prediction web app--------VERSION-1/cardio_scaler.sav","rb"))
+parkinson_scaler=pickle.load(open("parkinson_scaler.sav","rb"))
+diabetes_scaler=pickle.load(open("diabetes_scaler.sav","rb"))
+cardio_scaler=pickle.load(open("cardio_scaler.sav","rb"))
 
 with st.sidebar:
 	selected=option_menu("Multiple Disease Prediction",
