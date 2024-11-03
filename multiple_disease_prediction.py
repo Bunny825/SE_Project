@@ -192,16 +192,17 @@ if selected=="Parkinson Prediction":
 	
 	
 	
-if selected=="Cardio Diesase Prediction":
-	def pred_cardiovascular(inp):
-		inp=np.asarray(inp)
-		inp=inp.reshape(1,-1)
-		inp=cardio_scaler.transform(inp)
-		pred=cardio_model.predict(inp)
-		if pred[0]>0.5:
-			return "The patient has no cardiac disease"
-		else:
-			return "The patient is has cardiac disease"
+if selected == "Cardio Disease Prediction":
+    def pred_cardiovascular(inp):
+        inp = np.asarray(inp)
+        inp = inp.reshape(1, -1)
+        inp = cardio_scaler.transform(inp)
+        pred = cardio_model.predict(inp)
+        if pred[0] > 0.5:
+            return "The patient has cardiac disease"  # Adjusted message
+        else:
+            return "The patient has no cardiac disease"  # Adjusted message
+
     		
 	st.title("Cardiac Disease prediction")
 	
